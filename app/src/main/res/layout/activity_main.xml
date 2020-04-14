@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_start"
+
+        android:onClick="geradorRandom"
+
+
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:background="@drawable/selector_start"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/start"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_azul"
+
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/selector_azul"
+        android:onClick="pegaRes"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vermelho"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_verde"
+
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:onClick="pegaRes"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/selector_verde"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="2"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_amarelo"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_amarelo"
+
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:onClick="pegaRes"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/selector_amarelo"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="4"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_verde" />
+
+    <Button
+        android:id="@+id/btn_vermelho"
+        android:onClick="pegaRes"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/selector_vermelho"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_azul" />
+
+    <Button
+        android:id="@+id/btPlacar"
+        android:layout_width="121dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:background="#000000"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/btn_azul"
+        app:layout_constraintStart_toStartOf="@+id/btn_azul"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btRodada"
+        android:layout_width="121dp"
+        android:layout_height="71dp"
+        android:background="#000000"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/btn_azul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/btPlacar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:text="PONTUAÇÃO"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/btPlacar"
+        app:layout_constraintEnd_toEndOf="@+id/btPlacar"
+        app:layout_constraintStart_toStartOf="@+id/btPlacar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="RODADA"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/btRodada"
+        app:layout_constraintEnd_toEndOf="@+id/btRodada"
+        app:layout_constraintStart_toStartOf="@+id/btRodada"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
