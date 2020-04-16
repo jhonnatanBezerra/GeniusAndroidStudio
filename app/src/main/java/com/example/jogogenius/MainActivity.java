@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        btAzul.setBackgroundResource(R.drawable.btn_azul);
+                        btAzul.setBackgroundResource(R.drawable.selector_azul);
                     }
                 },delay+=500);
 
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        btVerde.setBackgroundResource(R.drawable.btn_verde);
+                        btVerde.setBackgroundResource(R.drawable.selector_verde);
                     }
                 },delay+=500);
             }
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        btVermelho.setBackgroundResource(R.drawable.btn_vermelho);
+                        btVermelho.setBackgroundResource(R.drawable.selector_vermelho);
                     }
                 },delay+=500);
             }
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        btAmarelo.setBackgroundResource(R.drawable.btn_amarelo);
+                        btAmarelo.setBackgroundResource(R.drawable.selector_amarelo);
                     }
                 },delay+=500);
             }
@@ -180,25 +180,25 @@ public class MainActivity extends AppCompatActivity {
             resetaJogo();
         }else{
 
-        for(int i = 0; i < seqRandom.size(); i++){
+            for(int i = 0; i < seqRandom.size(); i++){
 
-            if(seqRandom.get(i) == resUser.get(i)){
-                placar += 10;
-                btPlacar.setText(String.valueOf(placar));
-                System.out.println("Acertou");
-                continua = true;
+                if(seqRandom.get(i) == resUser.get(i)){
+                    placar += 10;
+                    btPlacar.setText(String.valueOf(placar));
+                    System.out.println("Acertou");
+                    continua = true;
 
-            }else{
-                System.out.println("FIm Fim de jogo");
-                continua = false;
+                }else{
+                    continua = false;
 
-                AlertDialog.Builder msg = new AlertDialog.Builder(MainActivity.this);
-                msg.setTitle("Perdeu");
-                msg.setMessage("Tempo esgotado");
-                msg.create();
-                msg.show();
-                resetaJogo();
-            }}
+                    AlertDialog.Builder msg = new AlertDialog.Builder(MainActivity.this);
+                    msg.setTitle("Tempo");
+                    msg.setMessage("Tempo esgotado");
+                    msg.create();
+                    msg.show();
+                    resetaJogo();
+                }
+            }
         }
 
 
